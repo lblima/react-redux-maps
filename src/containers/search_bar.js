@@ -33,7 +33,7 @@ class SearchBar extends Component {
                     placeholder='Get a five-day forecast in yout favorite cities'
                     className='form-control'
                     value={this.state.term}
-                    onChange={(this.onInputChange)} />
+                    onChange={this.onInputChange} />
                 <span className='input-group-btn'>
                     <button className='btn btn-secondary' type='submit'>Submit</button>
                 </span>
