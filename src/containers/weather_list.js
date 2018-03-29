@@ -15,27 +15,29 @@ class WeatherList extends Component {
             <tr key={name}>
                 <td><GoogleMaps lon={lon} lat={lat} /></td>
                 <td>
-                    <Chart height={120} width={180} data={temps} color='red' units='K' />
+                    <Chart height={120} width={180} data={temps} color='red' units='Celsius' />
                 </td>
                 <td>
-                    <Chart height={120} width={180} data={humidities} color='blue' units='hPa' />
+                    <Chart height={120} width={180} data={humidities} color='blue' units='%' />
                 </td>
                 <td>
-                    <Chart height={120} width={180} data={pressures} color='orange' units='%' />
+                    <Chart height={120} width={180} data={pressures} color='orange' units='hPa' />
                 </td>
             </tr>
         )
     }
 
     render() {
+        console.log(this.props.weather);
+        
         return (
             <table className='table table-hover'>
                 <thead>
                     <tr>
                         <th>City</th>
-                        <th>Temperature (K)</th>
-                        <th>Pressure (hPa)</th>
+                        <th>Temperature (Celsius)</th>
                         <th>Himidity (%)</th>
+                        <th>Pressure (hPa)</th>                        
                     </tr>
                 </thead>
                 <tbody>
