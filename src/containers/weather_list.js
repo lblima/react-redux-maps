@@ -21,7 +21,7 @@ class WeatherList extends Component {
                     <Chart height={120} width={180} data={humidities} color='blue' units='%' />
                 </td>
                 <td>
-                    <Chart height={120} width={180} data={pressures} color='orange' units='hPa' />
+                    <Chart height={120} width={180} data={pressures} color='green' units='hPa' />
                 </td>
             </tr>
         )
@@ -29,7 +29,7 @@ class WeatherList extends Component {
 
     render() {
         console.log(this.props.weather);
-        
+
         return (
             <table className='table table-hover'>
                 <thead>
